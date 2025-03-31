@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Game Invitation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: white;
+        }
+        .slideshow-container {
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            padding: 20px;
+        }
+        .slide {
+            display: none;
+            padding: 40px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .slide:nth-child(1) { background: rgba(255, 71, 87, 0.8); }
+        .slide:nth-child(2) { background: rgba(30, 144, 255, 0.8); }
+        .slide:nth-child(3) { background: rgba(46, 213, 115, 0.8); }
+        .slide:nth-child(4) { background: rgba(255, 127, 80, 0.8); }
+        .footer {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffdd57;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slide">"Aao Free Fire me milte hain, <br> Khelo, jeeto aur dosto ke sang machate hain! 🎮🔥"</div>
+        <div class="slide">"Ek baar invite accept kar lo, <br> Jeet tumhari, game hamara! 💥🎯"</div>
+        <div class="slide">"Bandook chalegi, dosti nibhegi, <br> Free Fire me team banegi! 🔫💪"</div>
+        <div class="slide">"Game on hai doston, <br> Chalo Free Fire khelte hain saath! 🏆🎮"</div>
+        <p class="footer">Made by Amit Sharma</p>
+    </div>
+
+    <script>
+        let slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        function showSlides() {
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[index].style.display = 'block';
+            index = (index + 1) % slides.length;
+        }
+
+        showSlides();
+        setInterval(showSlides, 3000);
+    </script>
+</body>
+</html>
